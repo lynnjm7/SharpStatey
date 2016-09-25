@@ -1,16 +1,29 @@
 using System;
 using System.Collections.Generic;
 
+/**
+ * Define a state that we can transition to.
+ */
 namespace SharpStatey {
     class State : IState {
+        // Keep track of all the different connections/transitions that
+        // a state can have...
         private List<ITransition> transitions = new List<ITransition>();
 
         public State() {;}
 
+        /**
+         * Add a transition to our list of transitions.
+         */
         public void AddTransition(ITransition trans) {
             transitions.Add(trans);
         }
 
+        /**
+         * Traverse our list of tranisitions and attempt to parse the string.
+         * If we are unable to parse the string and go to another node, then
+         * return failure.
+         */
         public Acceptance Parse(string str) {
             Console.WriteLine("    State->Parse: str = " + str);
             foreach (var trans in transitions) {

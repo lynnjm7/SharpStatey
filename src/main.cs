@@ -1,7 +1,14 @@
 using System;
 using SharpStatey;
 
+/**
+ * Statey is a small test application for playing around and running a handful
+ * of small toy test cases through the very small state machine.
+ */
 class Statey {
+    /**
+     * InitMachine creates the toy machine that we'll be playing with.
+     */
     public static StateMachine InitMachine() {
         var b = new State();
         b.AddTransition(new Transition("b", null));
@@ -15,6 +22,9 @@ class Statey {
         return new StateMachine(start);
     }
 
+    /**
+     * Main is our primary entryoint into the application.
+     */
     public static void Main(string[] args) {
         var sm = InitMachine();
         var pass0 = sm.Parse("bob");
