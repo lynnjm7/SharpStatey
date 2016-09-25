@@ -1,6 +1,7 @@
 SharpStatey
 =================
-A small toy project for playing with a Finite State Machine.
+A small toy project for playing with a Finite State Machine implementation in
+C#.
 
 # Purpose
 The purpose of the this project was to build something that was large enough
