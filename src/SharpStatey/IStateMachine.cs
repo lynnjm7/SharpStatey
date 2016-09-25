@@ -1,6 +1,3 @@
-using System;
-
-
 /**
  * Define the behavior expected of all StateMachines that can be defined. Originally,
  * the reason for defining interfaces was to allow for multiple definitions
